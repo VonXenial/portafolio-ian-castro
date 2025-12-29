@@ -1,0 +1,79 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  id?: string;
+}
+
+const { title, subtitle, id } = Astro.props;
+---
+
+<section id={id} class="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-24 section-reveal">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <header class="mb-16 md:mb-24">
+      <h2 class="text-headline font-sans font-bold text-cream section-title">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="text-xl md:text-2xl font-serif text-cream/60 mt-4 max-w-2xl italic section-subtitle">
+          {subtitle}
+        </p>
+      )}
+    </header>
+
+    <!-- Section content -->
+    <div class="section-content">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section-reveal');
+
+    sections.forEach((section) => {
+      const title = section.querySelector('.section-title');
+      const subtitle = section.querySelector('.section-subtitle');
+      const content = section.querySelector('.section-content');
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          end: 'top 50%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      if (title) {
+        tl.fromTo(title,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+      }
+
+      if (subtitle) {
+        tl.fromTo(subtitle,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
+          '-=0.4'
+        );
+      }
+
+      if (content) {
+        tl.fromTo(content,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.3'
+        );
+      }
+    });
+  });
+</script>

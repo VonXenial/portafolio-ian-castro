@@ -1,0 +1,271 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import MagneticButton from '../components/MagneticButton.tsx';
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <Hero 
+    name="Ian Castro" 
+    title="Ingeniero en Informática"
+    subtitle="Desarrollo web, aplicaciones móviles y videojuegos. Construyo experiencias digitales con propósito."
+  />
+
+  <!-- About Section with Photo -->
+  <section class="py-section px-6 md:px-12 lg:px-24 bg-black">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <!-- Photo -->
+      <div class="relative order-2 lg:order-1">
+        <div class="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 overflow-hidden">
+          <img 
+            src="/images/foto-perfil.JPG" 
+            alt="Ian Castro - Ingeniero en Informática"
+            class="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+            loading="lazy"
+          />
+          <!-- Decorative border -->
+          <div class="absolute inset-0 border-2 border-burgundy translate-x-4 translate-y-4 -z-10"></div>
+        </div>
+      </div>
+      
+      <!-- Text -->
+      <div class="order-1 lg:order-2">
+        <h2 class="text-headline font-sans font-bold text-cream mb-8">
+          Sobre mí
+        </h2>
+        <p class="text-body-lg font-serif text-cream/80 leading-relaxed mb-6">
+          Ingeniero en Informática con sólida formación técnica y experiencia práctica en el desarrollo de soluciones de software. 
+        </p>
+        <p class="text-body font-serif text-cream/60 leading-relaxed mb-8">
+          Poseo una visión integral del ciclo de vida del desarrollo, desde la toma de requerimientos y modelado de procesos hasta la implementación y pruebas. He trabajado con diversas tecnologías, desde desarrollo web moderno con React y Next.js hasta aplicaciones móviles nativas y motores de videojuegos.
+        </p>
+        
+        <!-- Education badge -->
+        <div class="flex items-center gap-4 p-4 bg-stone-warm/50 border-l-4 border-burgundy">
+          <img 
+            src="/images/logo-santo-tomas.webp" 
+            alt="Instituto Profesional Santo Tomás"
+            class="w-16 h-16 object-contain"
+            loading="lazy"
+          />
+          <div>
+            <p class="text-cream font-sans font-medium">Instituto Profesional Santo Tomás</p>
+            <p class="text-cream/60 text-sm">Ingeniería en Informática · 2022 - 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <Section 
+    id="experiencia" 
+    title="Experiencia" 
+    subtitle="Donde la teoría se convierte en código"
+  >
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+      <div>
+        <div class="border-l-4 border-crimson pl-8 mb-12">
+          <p class="text-cream/40 font-sans text-sm uppercase tracking-widest mb-2">
+            Sep 2025 — Ene 2026
+          </p>
+          <h3 class="text-title font-sans font-bold text-cream mb-4">
+            Hospital Dr. Franco Ravera Zunino
+          </h3>
+          <p class="text-cream/60 font-sans text-sm uppercase tracking-wider mb-6">
+            Práctica Profesional — Dep. de Desarrollo
+          </p>
+          <p class="text-body font-serif text-cream/70 leading-relaxed">
+            Desarrollé un módulo de receta oncológica con gestión de MLE y códigos Fonasa. 
+            Implementé flujos de validación críticos utilizando React, Next.js y Prisma como ORM.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:pt-12">
+        <h4 class="text-body-lg font-sans font-semibold text-cream/80 mb-6">Tecnologías utilizadas</h4>
+        <div class="flex flex-wrap gap-3">
+          {['React', 'Next.js', 'Prisma', 'TypeScript', 'Notion'].map((tech) => (
+            <span class="px-5 py-3 text-body font-sans text-cream/70 bg-black-soft border border-cream/10 hover:border-crimson hover:text-cream transition-all duration-300">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Projects Section -->
+  <section class="py-section px-6 md:px-12 lg:px-24 bg-black">
+    <div class="max-w-7xl mx-auto">
+      <header class="mb-16 md:mb-24">
+        <h2 class="text-headline font-sans font-bold text-cream">Proyectos</h2>
+        <p class="text-body-lg font-serif text-cream/60 mt-4 max-w-2xl italic">
+          Soluciones que he diseñado y construido
+        </p>
+      </header>
+
+      <!-- SparePartsM Project -->
+      <article class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-24 lg:mb-32">
+        <div class="relative aspect-video overflow-hidden bg-burgundy-dark">
+          <img 
+            src="/images/ic_sparepartsm.png" 
+            alt="SparePartsM - Gestión de Repuestos"
+            class="w-full h-full object-contain p-8 hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <span class="text-crimson font-sans text-sm uppercase tracking-widest">Android App</span>
+          <h3 class="text-title font-sans font-bold text-cream mt-2 mb-4">
+            SparePartsM
+          </h3>
+          <p class="text-body font-serif text-cream/70 leading-relaxed mb-6">
+            Aplicación Android para la gestión de repuestos en talleres mecánicos. Arquitectura MVVM completa con Firebase como backend, sistema RBAC, generación de reportes Excel y geolocalización.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            {['Android', 'Java', 'Firebase', 'MVVM', 'Apache POI'].map((tag) => (
+              <span class="px-3 py-1 text-sm font-sans uppercase tracking-wider text-cream/50 border border-cream/20">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <a 
+            href="https://github.com/AlexIbacache/Proyecto-Android-" 
+            target="_blank"
+            class="inline-flex items-center gap-2 text-cream hover:text-crimson font-sans uppercase tracking-widest transition-colors"
+          >
+            Ver en GitHub
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- HackWars Project -->
+      <article class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <span class="text-crimson font-sans text-sm uppercase tracking-widest">Videojuego en Desarrollo</span>
+          <h3 class="text-title font-sans font-bold text-cream mt-2 mb-4">
+            HackWars — Protocol Cards
+          </h3>
+          <p class="text-body font-serif text-cream/70 leading-relaxed mb-6">
+            Videojuego educativo de estrategia TCG desarrollado en Godot Engine 4.x. Combina mecánicas de cartas con ciberseguridad real, enseñando conceptos de hacking ético a través del juego.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            {['Godot 4', 'GDScript', 'Game Design', 'Ciberseguridad'].map((tag) => (
+              <span class="px-3 py-1 text-sm font-sans uppercase tracking-wider text-cream/50 border border-cream/20">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <span class="inline-flex items-center gap-2 text-cream/50 font-sans text-sm uppercase tracking-widest">
+            <span class="w-2 h-2 bg-crimson rounded-full animate-pulse"></span>
+            En desarrollo activo
+          </span>
+        </div>
+        <div class="relative aspect-video overflow-hidden bg-stone-dark order-1 lg:order-2">
+          <img 
+            src="/images/logo-hackwars.jpg" 
+            alt="HackWars - Protocol Cards"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <Section 
+    id="habilidades" 
+    title="Stack" 
+    subtitle="Herramientas y tecnologías que estoy experimentando"
+  >
+    <div class="grid md:grid-cols-3 gap-12">
+      <div class="p-8 bg-black-soft border-t-4 border-burgundy">
+        <h4 class="text-body-lg font-sans font-bold text-cream mb-6">
+          Desarrollo Web
+        </h4>
+        <ul class="space-y-4">
+          {['React / Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma ORM', 'Node.js'].map((skill) => (
+            <li class="text-body text-cream/70 font-serif flex items-center gap-3">
+              <span class="w-2 h-2 bg-burgundy"></span>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="p-8 bg-black-soft border-t-4 border-crimson">
+        <h4 class="text-body-lg font-sans font-bold text-cream mb-6">
+          Mobile & Games
+        </h4>
+        <ul class="space-y-4">
+          {['Android (Java/Kotlin)', 'Firebase', 'Godot Engine', 'Unity', 'GDScript'].map((skill) => (
+            <li class="text-body text-cream/70 font-serif flex items-center gap-3">
+              <span class="w-2 h-2 bg-crimson"></span>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="p-8 bg-black-soft border-t-4 border-cream/30">
+        <h4 class="text-body-lg font-sans font-bold text-cream mb-6">
+          Infraestructura
+        </h4>
+        <ul class="space-y-4">
+          {['MySQL / SQL', 'Linux Server', 'Git / GitHub', 'Redes (CCNA)', 'Kali Linux'].map((skill) => (
+            <li class="text-body text-cream/70 font-serif flex items-center gap-3">
+              <span class="w-2 h-2 bg-cream/30"></span>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Contact Section -->
+  <section class="py-section px-6 md:px-12 lg:px-24 bg-black">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-headline font-sans font-bold text-cream mb-8">
+        Contacto
+      </h2>
+      
+      <p class="text-title font-serif text-cream/80 leading-relaxed mb-12">
+        ¿Tienes un proyecto en mente o buscas un desarrollador comprometido? 
+        <span class="text-crimson">Estoy abierto</span> a nuevas oportunidades.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <MagneticButton href="mailto:ian.oficio@gmail.com" client:load>
+          Escríbeme
+        </MagneticButton>
+      </div>
+
+      <div class="pt-8 border-t border-cream/10">
+        <p class="text-body text-cream/40 font-sans">
+          +56 9 5875 8686 · Chile, Rancagua
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 md:px-12 lg:px-24 bg-black-rich border-t border-cream/5">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-cream/40 font-sans text-sm">
+        © 2025 Ian Castro. Diseñado con obsesión por el detalle.
+      </p>
+      <p class="text-cream/20 font-sans text-xs">
+        Astro · GSAP · Tailwind
+      </p>
+    </div>
+  </footer>
+</Layout>

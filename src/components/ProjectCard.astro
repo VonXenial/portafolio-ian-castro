@@ -1,0 +1,111 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  imageColor?: string;
+  year?: string;
+}
+
+const { title, description, tags, link, imageColor = '#2a2a2a', year } = Astro.props;
+---
+
+<article class="group project-card mb-16 md:mb-24">
+  <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+    <!-- Image placeholder with parallax -->
+    <div class="relative overflow-hidden aspect-[4/3] project-image-container">
+      <div 
+        class="absolute inset-0 project-image"
+        style={`background-color: ${imageColor};`}
+      >
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-24 h-24 border border-cream/20 rotate-45 group-hover:rotate-90 transition-transform duration-700"></div>
+        </div>
+        <div class="absolute bottom-4 left-4 text-cream/40 font-sans text-xs uppercase tracking-widest">
+          {year || '2025'}
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+      <h3 class="text-2xl md:text-3xl font-sans font-bold text-cream mb-4 group-hover:text-cream/80 transition-colors">
+        {title}
+      </h3>
+      
+      <p class="text-lg font-serif text-cream/70 leading-relaxed mb-6">
+        {description}
+      </p>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        {tags.map((tag) => (
+          <span class="px-3 py-1 text-xs font-sans uppercase tracking-wider text-cream/60 border border-cream/20 hover:border-cream/40 transition-colors">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- Link -->
+      {link && (
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-cream/80 hover:text-cream font-sans text-sm uppercase tracking-widest transition-colors group/link"
+        >
+          Ver proyecto
+          <svg 
+            class="w-4 h-4 transition-transform group-hover/link:translate-x-1" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      )}
+    </div>
+  </div>
+</article>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach((card) => {
+      const image = card.querySelector('.project-image');
+
+      // Parallax effect on image
+      if (image) {
+        gsap.fromTo(image,
+          { yPercent: -10, scale: 1.1 },
+          {
+            yPercent: 10,
+            scale: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1
+            }
+          }
+        );
+      }
+    });
+  });
+</script>
+
+<style>
+  .project-image-container {
+    overflow: hidden;
+  }
+</style>
