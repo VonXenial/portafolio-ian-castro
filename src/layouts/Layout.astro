@@ -30,10 +30,16 @@ const {
     <!-- Film grain overlay -->
     <div class="grain-overlay" aria-hidden="true"></div>
     
+    <!-- Suits background overlay -->
+    <div class="suits-overlay" aria-hidden="true"></div>
+    
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+
     <!-- Main content -->
     <slot />
 
-    <!-- Lenis Smooth Scroll Initialization -->
+    <!-- Lenis Smooth Scroll & Cursor Logic -->
     <script>
       import Lenis from 'lenis';
       import gsap from 'gsap';
@@ -41,7 +47,23 @@ const {
 
       gsap.registerPlugin(ScrollTrigger);
 
-      // Initialize Lenis
+      // --- Custom Cursor Logic ---
+      const cursorDot = document.getElementById('cursor-dot');
+      
+      // Initial position usually hidden or center
+      gsap.set(cursorDot, { xPercent: -50, yPercent: -50 });
+
+      // Move cursor
+      window.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        
+        // Dot moves with slight lag for smoothness
+        gsap.to(cursorDot, { x: clientX, y: clientY, duration: 0.1 });
+      });
+
+      // Hover effects can be re-added here if we want to scale the dot itself, but user asked to just remove the layer.
+      
+      // --- Lenis Initialization ---
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -58,6 +80,21 @@ const {
       });
 
       gsap.ticker.lagSmoothing(0);
+
+      // Background Suits Parallax Effect
+      const suitsOverlay = document.querySelector('.suits-overlay');
+      if (suitsOverlay) {
+        gsap.to(suitsOverlay, {
+          backgroundPosition: '0px 1000px', // Move background pattern significantly to create flow effect
+          ease: 'none',
+          scrollTrigger: {
+            trigger: document.body,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
+          }
+        });
+      }
 
       // Background color transition on scroll
       const body = document.body;
