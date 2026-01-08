@@ -6,9 +6,10 @@ interface Props {
     children: ReactNode;
     href?: string;
     className?: string;
+    target?: string;
 }
 
-export default function MagneticButton({ children, href, className = '' }: Props) {
+export default function MagneticButton({ children, href, className = '', target }: Props) {
     const ref = useRef<HTMLDivElement>(null);
 
     const x = useMotionValue(0);
@@ -83,7 +84,7 @@ export default function MagneticButton({ children, href, className = '' }: Props
 
     if (href) {
         return (
-            <a href={href} className="group inline-block">
+            <a href={href} className="group inline-block" target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
                 {content}
             </a>
         );
