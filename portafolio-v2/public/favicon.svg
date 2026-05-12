@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="32" fill="#0A0A0A" stroke="#800020" stroke-width="8"/>
+    <text x="60" y="86" font-family="monospace" font-size="56" font-weight="bold" fill="#EAEAEA" text-anchor="middle">IC</text>
+    <rect x="94" y="70" width="12" height="12" fill="#800020"/>
+</svg>

@@ -1,72 +1,70 @@
-# IAN LEONARDO CASTRO CONTRERAS
-**Ingeniero en Informática (En formación)**
+# [cite_start]Ian Leonardo Castro Contreras [cite: 1]
+[cite_start]**Ingeniero en Informática** [cite: 2]
 
-📍 Los Artesanos, 0820 · 📞 +56 9 5875 8686 · 📧 [ian.oficio@gmail.com](mailto:ian.oficio@gmail.com)
-
----
-
-### PERFIL PROFESIONAL
-Ingeniero en Informática con sólida formación técnica y experiencia práctica en el desarrollo de soluciones de software. Poseo una visión integral del ciclo de vida del desarrollo, desde la toma de requerimientos y modelado de procesos hasta la implementación y pruebas. He trabajado con diversas tecnologías, desde desarrollo web moderno con **React** y **Next.js** hasta aplicaciones móviles nativas y motores de videojuegos. Me caracterizo por mi capacidad de aprendizaje rápido, mi enfoque en la documentación eficiente mediante **Notion** y mi compromiso con la entrega de productos de alta calidad que resuelvan problemas reales.
+* [cite_start]**Dirección:** Los Artesanos 0820 [cite: 3]
+* [cite_start]**Teléfono:** +56 9 5875 8686 [cite: 4]
+* [cite_start]**Correo:** ian.oficio@gmail.com [cite: 5]
+* [cite_start]**GitHub:** Von Xenial [cite: 4]
 
 ---
 
-### EXPERIENCIA PROFESIONAL
-
-**Hospital Dr. Franco Ravera Zunino**  
-*Práctica Profesional en Departamento de Desarrollo*  
-📅 *29 de septiembre, 2025 – 8 de enero, 2026*
-
-Durante mi periodo de práctica, me integré activamente en el equipo de desarrollo del hospital, participando en la creación de herramientas críticas para la gestión clínica.
-*   **Desarrollo de Módulo de Receta Oncológica:** Diseñé e implementé un módulo especializado para la gestión de recetas oncológicas, integrando la lógica de negocio para la gestión de **MLE (Modalidad de Libre Elección)** y **códigos Fonasa**.
-*   **Validación de Procesos:** Implementé flujos de validación para asegurar la integridad y correctitud de la información en las recetas médicas.
-*   **Stack Tecnológico:** Trabajé con **React** y **Next.js** para el frontend, utilizando **Prisma** como ORM para la interacción con la base de datos.
-*   **Mejora de Productividad:** Adopté **Notion** como herramienta principal para la documentación técnica y el seguimiento de tareas, optimizando la organización interna del proyecto.
+## [cite_start]Perfil Profesional [cite: 6]
+[cite_start]Ingeniero en Informática con formación sólida en arquitectura de sistemas, desarrollo de software y automatización inteligente[cite: 7]. [cite_start]Especializado en liderazgo técnico de proyectos académicos con integración de IA local[cite: 8]. [cite_start]Comprometido con la excelencia operativa, el aprendizaje continuo y la generación de valor mediante soluciones tecnológicas escalables[cite: 9].
 
 ---
 
-### PROYECTOS DESTACADOS
-
-#### 1. SparePartsM – Gestión de Repuestos de Maquinaria 📌
-Aplicación Android de nivel profesional diseñada para la digitalización de inventarios y gestión de reparaciones en talleres mecánicos.
-*   **Arquitectura:** Implementación completa del patrón **MVVM** para una separación de responsabilidades robusta.
-*   **Backend:** Integración con **Firebase** (Cloud Firestore, Authentication y Storage) para la sincronización de datos en tiempo real.
-*   **Funcionalidades Clave:**
-    *   Control de Acceso basado en Roles (RBAC) con panel administrativo dedicado.
-    *   Generación de reportes profesionales en formato **Excel** mediante Apache POI.
-    *   Dashboard de usuario con geolocalización (Google Location Services) y visualización de estadísticas animadas.
-    *   Sistema centralizado de auditoría (logs) para el seguimiento de acciones críticas.
-
-#### 2. HackWars – Protocol Cards 🎮 (En desarrollo)
-Videojuego educativo de estrategia (TCG/Tactical RPG) desarrollado en **Godot Engine 4.x** enfocado en la enseñanza de ciberseguridad.
-*   **Concepto:** Combina mecánicas de cartas con posicionamiento táctico en tablero, donde cada carta representa protocolos reales (TCP/IP, DNS) o herramientas de hacking.
-*   **Desarrollo Técnico:** Programación en **GDScript**, utilizando patrones de diseño como *Command*, *Observer* y *State* para gestionar la lógica de turnos y efectos de red.
-*   **Objetivo:** Introducir conceptos de hacking ético, modelos OSI y defensa en profundidad de manera lúdica.
+## [cite_start]Formación Académica [cite: 10]
+* **Ingeniería en Informática** | [cite_start]Instituto Profesional Santo Tomás (2022-2026) [cite: 11, 12, 13]
+    * [cite_start]**Distinción:** Proyecto de Título destacado: Sistema de Transcripción Inteligente con IA local[cite: 13].
+    * [cite_start]**Relevante:** Arquitectura de software, redes empresariales y bases de datos distribuidas[cite: 14].
+* **Enseñanza Media y Básica completada** | [cite_start]Colegio Niño Jesús de Praga[cite: 15, 16].
 
 ---
 
-### EDUCACIÓN
+## [cite_start]Experiencia Profesional [cite: 17]
 
-*   **Ingeniería en Informática** | *Instituto Profesional Santo Tomás* (2022 – 2025)
-    *   7° semestre aprobado, formación enfocada en desarrollo, redes y gestión de proyectos.
-*   **Enseñanza Media** | *Colegio Niño Jesús de Praga* (2018 – 2021)
+### [cite_start]Practicante de Desarrollo de Software [cite: 18]
+**Hospital Dr. Franco Ravera Zunino - Departamento de Informática** | [cite_start]*Septiembre 2025 – Enero 2026* [cite: 20, 21]
+* [cite_start]Desarrollé e implementé soluciones informáticas internas optimizando procesos hospitalarios en entorno de producción real[cite: 22, 23].
+* [cite_start]Colaboré en análisis, mantenimiento y mejora continua de sistemas críticos de salud[cite: 24].
+* [cite_start]Completé más de 425 horas de práctica profesional con enfoque en arquitectura de sistemas legacy[cite: 24, 25].
+
+### [cite_start]Empleado de Planta [cite: 26]
+**GeoFrut – Línea de Producción** | [cite_start]*Verano 2024* [cite: 27, 28]
+* [cite_start]Mantuve estándares de higiene y seguridad industrial en operaciones de alta demanda[cite: 29].
+* [cite_start]Demostré capacidad de trabajo bajo presión y orientación a resultados operativos[cite: 29].
+
+### [cite_start]Vendedor [cite: 29]
+**PET Borde Laguna** | [cite_start]*2023 (3 meses)* [cite: 30, 31]
+* [cite_start]Gestioné el ciclo completo de ventas y reposición de productos con atención al cliente[cite: 32].
+* [cite_start]Cumplí metas de puntualidad y responsabilidad en turnos operativos[cite: 32].
+
+### [cite_start]Vendedor de Calzado [cite: 33]
+**Touch Chile** | [cite_start]*Verano 2021* [cite: 34, 35]
+* [cite_start]Brindé asesoría especializada y manejo de caja con enfoque en satisfacción del cliente[cite: 36].
+* [cite_start]Contribuí al cumplimiento de objetivos de venta mediante trabajo colaborativo[cite: 36].
 
 ---
 
-### HABILIDADES TÉCNICAS
+## [cite_start]Competencias Técnicas [cite: 37]
 
-*   **Programación:** Java (Android), JavaScript/TypeScript, GDScript, PHP, SQL, C#, Python.
-*   **Desarrollo Web:** React, Next.js, Prisma ORM, Node.js, Tailwind CSS, Bootstrap.
-*   **Bases de Datos:** MySQL, Firebase (NoSQL), modelado y administración.
-*   **Herramientas y Frameworks:** Android Studio (MVVM), Godot Engine, Git/GitHub, Unity.
-*   **Infraestructura y Redes:** Configuración de redes LAN (Cisco), IPv4/IPv6, seguridad básica.
-*   **Sistemas:** Windows Server, Linux (Debian, Ubuntu, Kali Linux).
-*   **Productividad:** Notion (Documentación experta), Microsoft Office avanzado, Bizagi Modeler.
+### [cite_start]Arquitectura y Desarrollo [cite: 38]
+* [cite_start]**Lenguajes:** Java, C#, Python, JavaScript, PHP, SQL, Kotlin[cite: 39].
+* [cite_start]**Frameworks:** Node.js, Bootstrap, Materialize, Tailwind[cite: 40].
+* [cite_start]**Patrones:** MVC, Microservicios, Cliente-Servidor, APIs[cite: 41].
+* [cite_start]**Herramientas:** Visual Studio, VS Code, Android Studio, Unity[cite: 42].
+
+### [cite_start]Infraestructura y Datos [cite: 44]
+* [cite_start]**Redes:** LAN, TCP/IP (IPv4/IPv6), DHCP, Cisco Packet Tracer[cite: 45].
+* [cite_start]**Bases de Datos:** MySQL, Firebase (diseño, consulta, administración)[cite: 46].
+* [cite_start]**Sistemas:** Windows Server, Linux (Debian, Ubuntu, Kali Linux)[cite: 47].
+* [cite_start]**Análisis:** Orange Data Mining, Bizagi Modeler[cite: 48].
 
 ---
 
-### OTROS DATOS DE INTERÉS
+## [cite_start]Certificaciones y Desarrollo Profesional [cite: 43]
+* [cite_start]**Cisco Networking Academy:** CCNA v7 (Introducción a Redes), IT Essentials[cite: 49].
+* [cite_start]**Formación complementaria:** Programación Avanzada, Arquitectura de Software, Diseño de Software y Bases de Datos[cite: 50].
+* [cite_start]**Especialización:** Prácticas controladas de hacking ético (Kali Linux)[cite: 51].
 
-*   **Experiencias Laborales Previas:** Geofrut (Operario de planta, 2024), Pet Borde Laguna (Vendedor, 2023), Touch Chile (Vendedor, 2021).
-*   **Certificaciones:**
-    *   Cisco Networking Academy: IT Essentials & Introduction to Networks (CCNA v7).
-    *   Certificados en Arquitectura de Software, Programación Avanzada y Diseño de Bases de Datos.
+> [cite_start]Referencias disponibles bajo solicitud[cite: 52].

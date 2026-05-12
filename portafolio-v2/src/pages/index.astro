@@ -1,0 +1,443 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+import fotoPerfil from '../../public/images/foto-perfil-marco.jpeg';
+import imgSpareParts from '../../public/images/ic_sparepartsm.png';
+import imgHackWars from '../../public/images/logo-hackwars.jpg';
+import imgSantoTomas from '../../public/images/logo-santo-tomas.webp';
+---
+
+<Layout title="Ian Castro | Ingeniero Informático">
+  <!-- Navigation / Header -->
+  <header class="fixed top-0 w-full z-50 bg-corporate-dark/90 backdrop-blur-md border-b border-corporate-border">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="font-mono text-xl font-bold tracking-tighter">
+        <span class="text-burgundy-primary">IC</span><span class="text-text-primary">.dev</span>
+      </div>
+      <nav class="hidden md:flex gap-8 font-mono text-sm">
+        <a href="#experiencia" class="text-text-secondary hover:text-gold-accent transition-colors">/experiencia</a>
+        <a href="#proyectos" class="text-text-secondary hover:text-gold-accent transition-colors">/proyectos</a>
+        <a href="#certificaciones" class="text-text-secondary hover:text-gold-accent transition-colors">/certificaciones</a>
+        <a href="#contacto" class="text-text-secondary hover:text-gold-accent transition-colors">/contacto</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-gold-accent transition-colors focus:outline-none" aria-label="Abrir menú">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-corporate-dark/95 backdrop-blur-md border-b border-corporate-border absolute w-full left-0 top-20 shadow-2xl transition-all duration-300">
+      <nav class="flex flex-col p-6 gap-6 font-mono text-base">
+        <a href="#experiencia" class="mobile-link text-text-primary hover:text-gold-accent transition-colors border-l-2 border-transparent hover:border-burgundy-primary pl-4">/experiencia</a>
+        <a href="#proyectos" class="mobile-link text-text-primary hover:text-gold-accent transition-colors border-l-2 border-transparent hover:border-burgundy-primary pl-4">/proyectos</a>
+        <a href="#certificaciones" class="mobile-link text-text-primary hover:text-gold-accent transition-colors border-l-2 border-transparent hover:border-burgundy-primary pl-4">/certificaciones</a>
+        <a href="#contacto" class="mobile-link text-text-primary hover:text-gold-accent transition-colors border-l-2 border-transparent hover:border-burgundy-primary pl-4">/contacto</a>
+      </nav>
+    </div>
+    
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="absolute bottom-0 left-0 h-[2px] bg-burgundy-primary shadow-[0_0_8px_rgba(128,0,32,0.8)] w-0 z-50"></div>
+  </header>
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-10 md:pb-10 border-b border-corporate-border relative">
+      <!-- Decorative background element -->
+      <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-burgundy-deep/10 to-transparent pointer-events-none"></div>
+
+
+      <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block px-3 py-1 mb-6 border border-burgundy-primary/30 bg-burgundy-primary/10 rounded-sm">
+            <span class="font-mono text-xs text-burgundy-light uppercase tracking-widest">Estado: Operativo</span>
+          </div>
+          <h1 class="text-5xl md:text-7xl font-sans font-bold tracking-tight text-text-primary mb-6">
+            Ian Castro<span class="text-burgundy-primary">.</span>
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-mono text-text-secondary mb-10 leading-relaxed text-balance">
+            Ingeniero en Informática especializado en desarrollo <span class="text-gold-accent">Multiplataforma</span> (Web, Android y Escritorio). Formación sólida en arquitectura de sistemas, automatización e integración de <span class="text-burgundy-light font-semibold">IA Local</span>.
+          </h2>
+          <div class="flex flex-col sm:flex-row gap-4 font-mono text-sm">
+            <a href="#contacto" class="px-8 py-4 bg-text-primary text-corporate-dark font-bold hover:bg-gold-accent transition-colors text-center">
+              INICIAR_CONTACTO
+            </a>
+            <a href="#experiencia" class="px-8 py-4 border border-corporate-border hover:border-burgundy-primary text-text-secondary hover:text-text-primary transition-all text-center">
+              VER_REGISTROS
+            </a>
+          </div>
+        </div>
+
+        <!-- Lado Derecho: Terminal de Sistema -->
+        <div class="hidden md:block relative">
+          <!-- Decoración detrás de la terminal -->
+          <div class="absolute -inset-1 bg-gradient-to-tr from-burgundy-deep to-transparent opacity-20 blur-xl"></div>
+          
+          <div class="border border-corporate-border bg-corporate-dark/80 backdrop-blur-md p-8 relative shadow-2xl">
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-burgundy-primary to-transparent"></div>
+            
+            <div class="flex justify-between items-center mb-6 border-b border-corporate-border/50 pb-4">
+              <span class="font-mono text-xs text-text-muted uppercase tracking-widest">Sys_Terminal v4.2.0</span>
+              <div class="flex gap-2">
+                <span class="w-2 h-2 bg-corporate-border"></span>
+                <span class="w-2 h-2 bg-corporate-border"></span>
+                <span class="w-2 h-2 bg-burgundy-primary animate-pulse"></span>
+              </div>
+            </div>
+            
+            <div class="font-mono text-sm text-text-secondary space-y-4">
+              <p class="text-burgundy-light">&gt; INICIANDO KERNEL IC.DEV...</p>
+              
+              <div class="space-y-2">
+                <p class="flex justify-between"><span class="opacity-70">[OK] Carga de Perfil:</span> <span class="text-text-primary">Ingeniero Informático</span></p>
+                <p class="flex justify-between"><span class="opacity-70">[OK] Módulo Web:</span> <span class="text-text-primary">React, Next.js, Astro</span></p>
+                <p class="flex justify-between"><span class="opacity-70">[OK] Módulo Móvil:</span> <span class="text-text-primary">Android, Kotlin, Java</span></p>
+                <p class="flex justify-between"><span class="opacity-70">[OK] Backend & DB:</span> <span class="text-text-primary">Node, PHP, SQL, Firebase</span></p>
+                <p class="flex justify-between"><span class="opacity-70">[OK] IA Engine:</span> <span class="text-text-primary">Integración Local Activa</span></p>
+              </div>
+              
+              <div class="pt-4 border-t border-corporate-border/50 mt-6">
+                <p class="text-gold-accent">&gt; UPTIME: <span class="text-text-primary">Operación Continua</span></p>
+                <p class="text-gold-accent mt-2">&gt; ESTADO DEL SISTEMA: <span class="text-text-primary animate-pulse">LISTO PARA DESPLIEGUE_</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="max-w-6xl mx-auto px-6 py-24 border-b border-corporate-border">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <h3 class="font-mono text-sm text-text-muted uppercase tracking-widest mb-4">01 // Perfil</h3>
+          <h2 class="text-3xl font-sans font-bold text-text-primary mb-8">Resumen<br/>Ejecutivo</h2>
+          <div class="relative w-full max-w-[240px] border border-corporate-border bg-corporate-dark overflow-hidden group">
+            <Image src={fotoPerfil} alt="Ian Castro" width={480} class="w-full h-auto block transition-all duration-700 group-hover:scale-105 group-hover:brightness-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-burgundy-deep/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="space-y-4 mb-12">
+            <p class="text-lg text-text-secondary leading-relaxed">
+              Ingeniero en Informática titulado con <span class="text-text-primary font-semibold">distinción máxima</span>, con sólida formación en desarrollo de software, bases de datos, redes y arquitectura de sistemas. Poseo dominio de múltiples lenguajes de programación y herramientas tecnológicas multiplataforma (Web, Android, Escritorio).
+            </p>
+            <p class="text-lg text-text-secondary leading-relaxed">
+              Tengo experiencia en el liderazgo de proyectos orientados a la planificación, implementación y pruebas de soluciones informáticas complejas con integración de IA. Destaco por mi capacidad de aprendizaje continuo, trabajo en equipo, responsabilidad y un compromiso inquebrantable con la mejora constante.
+            </p>
+          </div>
+          
+          <!-- Matriz Tecnológica -->
+          <div>
+            <h4 class="font-mono text-xs text-burgundy-light uppercase tracking-widest mb-6 border-b border-corporate-border pb-2">Matriz Tecnológica</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
+              <div>
+                <span class="block font-mono text-text-muted text-xs mb-3">FRONTEND</span>
+                <ul class="space-y-2 font-sans text-sm text-text-primary">
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> React / Next.js</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Astro</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Tailwind CSS</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> JS / TypeScript</li>
+                </ul>
+              </div>
+              <div>
+                <span class="block font-mono text-text-muted text-xs mb-3">BACKEND & DB</span>
+                <ul class="space-y-2 font-sans text-sm text-text-primary">
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Node.js / Express</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> PHP / Java</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> MySQL / Postgres</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Firebase (BaaS)</li>
+                </ul>
+              </div>
+              <div>
+                <span class="block font-mono text-text-muted text-xs mb-3">TOOLS & OS</span>
+                <ul class="space-y-2 font-sans text-sm text-text-primary">
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Android / Kotlin</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Godot (GDScript)</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Git / GitHub</li>
+                  <li class="flex items-center gap-2"><span class="w-1 h-1 bg-burgundy-primary rounded-full"></span> Linux / Windows</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especialidades Section -->
+    <section class="max-w-6xl mx-auto px-6 py-24 border-b border-corporate-border bg-corporate-dark/30">
+      <div class="mb-16 text-center md:text-left">
+        <h3 class="font-mono text-sm text-text-muted uppercase tracking-widest mb-4">01.5 // Especialidades</h3>
+        <h2 class="text-3xl font-sans font-bold text-text-primary">Arquitectura y<br/>Desarrollo</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Servicio 1 -->
+        <div class="p-8 border border-corporate-border bg-corporate-surface hover:border-burgundy-primary/50 transition-colors group">
+          <div class="text-burgundy-primary mb-6 font-mono text-4xl group-hover:text-gold-accent transition-colors">01</div>
+          <h4 class="text-xl font-bold text-text-primary mb-4">Arquitectura Multiplataforma</h4>
+          <p class="text-sm text-text-secondary leading-relaxed">Diseño y desarrollo de ecosistemas completos: aplicaciones web robustas, móviles nativas y sistemas de escritorio, asegurando escalabilidad y rendimiento constante.</p>
+        </div>
+        <!-- Servicio 2 -->
+        <div class="p-8 border border-corporate-border bg-corporate-surface hover:border-burgundy-primary/50 transition-colors group">
+          <div class="text-burgundy-primary mb-6 font-mono text-4xl group-hover:text-gold-accent transition-colors">02</div>
+          <h4 class="text-xl font-bold text-text-primary mb-4">Sistemas de Gestión</h4>
+          <p class="text-sm text-text-secondary leading-relaxed">Creación de sistemas de inventario y ERPs con arquitecturas seguras, control de accesos (RBAC) y bases de datos transaccionales de alto rendimiento.</p>
+        </div>
+        <!-- Servicio 3 -->
+        <div class="p-8 border border-corporate-border bg-corporate-surface hover:border-burgundy-primary/50 transition-colors group">
+          <div class="text-burgundy-primary mb-6 font-mono text-4xl group-hover:text-gold-accent transition-colors">03</div>
+          <h4 class="text-xl font-bold text-text-primary mb-4">Integración de IA Local</h4>
+          <p class="text-sm text-text-secondary leading-relaxed">Implementación de modelos de Inteligencia Artificial (LLMs) ejecutables en entornos locales y privados, optimizando flujos de trabajo de forma segura.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="max-w-6xl mx-auto px-6 py-24 border-b border-corporate-border">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <h3 class="font-mono text-sm text-text-muted uppercase tracking-widest mb-4">02 // Historial</h3>
+          <h2 class="text-3xl font-sans font-bold text-text-primary">Experiencia<br/>Operativa</h2>
+        </div>
+        <div class="md:col-span-8 space-y-16">
+          
+          <!-- Hospital -->
+          <div class="relative pl-8 md:pl-0">
+            <div class="hidden md:block absolute -left-12 top-2 w-4 h-4 border-2 border-burgundy-primary rounded-full bg-corporate-dark z-10"></div>
+            <div class="hidden md:block absolute -left-[42px] top-6 bottom-[-64px] w-[1px] bg-corporate-border"></div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <h4 class="text-xl font-sans font-bold text-text-primary">Hospital Dr. Franco Ravera Zunino</h4>
+              <span class="font-mono text-sm text-gold-accent mt-1 md:mt-0">Sep 2025 – Ene 2026</span>
+            </div>
+            <p class="font-mono text-sm text-text-muted mb-4">Desarrollo de Software / Práctica Profesional</p>
+            <ul class="space-y-3 text-text-secondary text-base">
+              <li class="flex gap-3"><span class="text-burgundy-primary">›</span> Desarrollé e implementé soluciones informáticas internas optimizando procesos hospitalarios en entorno de producción real.</li>
+              <li class="flex gap-3"><span class="text-burgundy-primary">›</span> Colaboré en análisis, mantenimiento y mejora continua de sistemas críticos de salud.</li>
+              <li class="flex gap-3"><span class="text-burgundy-primary">›</span> Completé más de 425 horas de práctica profesional con enfoque en arquitectura de sistemas legacy.</li>
+            </ul>
+          </div>
+
+          <!-- GeoFrut -->
+          <div class="relative pl-8 md:pl-0">
+            <div class="hidden md:block absolute -left-12 top-2 w-4 h-4 border-2 border-corporate-border rounded-full bg-corporate-dark z-10"></div>
+            <div class="hidden md:block absolute -left-[42px] top-6 bottom-[-64px] w-[1px] bg-corporate-border"></div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <h4 class="text-xl font-sans font-bold text-text-primary">GeoFrut</h4>
+              <span class="font-mono text-sm text-text-muted mt-1 md:mt-0">Verano 2024</span>
+            </div>
+            <p class="font-mono text-sm text-text-muted mb-4">Empleado de Planta / Línea de Producción</p>
+            <ul class="space-y-3 text-text-secondary text-base">
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Mantuve estándares de higiene y seguridad industrial en operaciones de alta demanda.</li>
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Demostré capacidad de trabajo bajo presión y orientación a resultados operativos.</li>
+            </ul>
+          </div>
+
+          <!-- PET Borde Laguna -->
+          <div class="relative pl-8 md:pl-0">
+            <div class="hidden md:block absolute -left-12 top-2 w-4 h-4 border-2 border-corporate-border rounded-full bg-corporate-dark z-10"></div>
+            <div class="hidden md:block absolute -left-[42px] top-6 bottom-[-64px] w-[1px] bg-corporate-border"></div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <h4 class="text-xl font-sans font-bold text-text-primary">PET Borde Laguna</h4>
+              <span class="font-mono text-sm text-text-muted mt-1 md:mt-0">2023 (3 meses)</span>
+            </div>
+            <p class="font-mono text-sm text-text-muted mb-4">Vendedor</p>
+            <ul class="space-y-3 text-text-secondary text-base">
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Gestioné el ciclo completo de ventas y reposición de productos con atención al cliente.</li>
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Cumplí metas de puntualidad y responsabilidad en turnos operativos.</li>
+            </ul>
+          </div>
+
+          <!-- Touch Chile -->
+          <div class="relative pl-8 md:pl-0">
+            <div class="hidden md:block absolute -left-12 top-2 w-4 h-4 border-2 border-corporate-border rounded-full bg-corporate-dark z-10"></div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <h4 class="text-xl font-sans font-bold text-text-primary">Touch Chile</h4>
+              <span class="font-mono text-sm text-text-muted mt-1 md:mt-0">Verano 2021</span>
+            </div>
+            <p class="font-mono text-sm text-text-muted mb-4">Vendedor de Calzado</p>
+            <ul class="space-y-3 text-text-secondary text-base">
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Brindé asesoría especializada y manejo de caja con enfoque en satisfacción del cliente.</li>
+              <li class="flex gap-3"><span class="text-corporate-border">›</span> Contribuí al cumplimiento de objetivos de venta mediante trabajo colaborativo.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="max-w-6xl mx-auto px-6 py-24 border-b border-corporate-border">
+      <div class="mb-16">
+        <h3 class="font-mono text-sm text-text-muted uppercase tracking-widest mb-4">03 // Proyectos</h3>
+        <h2 class="text-3xl font-sans font-bold text-text-primary">Desarrollos<br/>Destacados</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+          <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center">
+            <Image src={imgSpareParts} alt="SparePartsM" width={800} class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" />
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold text-text-primary mb-2">SparePartsM</h4>
+            <p class="text-text-secondary text-sm flex-grow mb-6">Aplicación Android para gestión de repuestos. Arquitectura MVVM completa con Firebase, sistema RBAC, reportes Excel y geolocalización.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Android</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Firebase</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Java</span>
+            </div>
+            <a href="https://github.com/AlexIbacache/Proyecto-Android-" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+              [VER_REPOSITORIO] <span class="text-lg">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+          <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center">
+            <div class="absolute top-4 right-4 z-20 flex items-center gap-2 bg-corporate-dark/80 px-2 py-1 rounded-sm backdrop-blur-sm">
+              <span class="w-2 h-2 rounded-full bg-burgundy-light animate-pulse"></span>
+              <span class="font-mono text-xs text-text-muted uppercase drop-shadow-md">Activo</span>
+            </div>
+            <Image src={imgHackWars} alt="HackWars" width={800} class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" />
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold text-text-primary mb-2">HackWars — Protocol Cards</h4>
+            <p class="text-text-secondary text-sm flex-grow mb-6">Videojuego educativo de estrategia TCG desarrollado en Godot 4.x. Combina mecánicas de cartas con conceptos reales de ciberseguridad y hacking ético.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Godot 4</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">GDScript</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Ciberseguridad</span>
+            </div>
+            <a href="https://hackwars.vercel.app/" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+              [VER_SITIO_WEB] <span class="text-lg">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificaciones" class="max-w-6xl mx-auto px-6 py-24 border-b border-corporate-border">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <h3 class="font-mono text-sm text-text-muted uppercase tracking-widest mb-4">04 // Credenciales</h3>
+          <h2 class="text-3xl font-sans font-bold text-text-primary">Validación<br/>Oficial</h2>
+        </div>
+        <div class="md:col-span-8">
+          <div class="space-y-6">
+            
+            <div class="p-8 border border-corporate-border bg-gradient-to-br from-corporate-surface to-corporate-dark relative overflow-hidden group">
+              <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-burgundy-deep/20 to-transparent pointer-events-none z-0"></div>
+              <Image src={imgSantoTomas} alt="Santo Tomás" width={192} class="absolute right-4 bottom-4 w-24 h-24 object-contain z-0 transition-all duration-700 group-hover:scale-110 group-hover:opacity-100 opacity-60 drop-shadow-lg" />
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 relative z-10">
+                <div>
+                  <h4 class="font-mono text-xs text-burgundy-light uppercase tracking-widest mb-2">Título Profesional</h4>
+                  <h3 class="text-2xl font-bold text-text-primary">Ingeniero Informático</h3>
+                  <p class="text-text-secondary mt-1">Instituto Profesional Santo Tomás</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-left md:text-right">
+                  <p class="font-mono text-gold-accent text-sm">Distinción Máxima</p>
+                  <p class="font-mono text-text-muted text-xs mt-1">Emisión: 07.MAY.2026</p>
+                </div>
+              </div>
+              <div class="flex gap-6 pt-6 border-t border-corporate-border/50 relative z-10">
+                <div>
+                  <p class="font-mono text-[10px] text-text-muted uppercase">Registro ID</p>
+                  <p class="font-mono text-sm text-text-primary">148569-1</p>
+                </div>
+                <div>
+                  <p class="font-mono text-[10px] text-text-muted uppercase">Verificación</p>
+                  <p class="font-mono text-sm text-text-primary">SHJ8PA54</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 border border-corporate-border bg-gradient-to-br from-corporate-surface to-corporate-dark relative overflow-hidden">
+              <div class="flex flex-col md:flex-row md:items-end justify-between relative z-10">
+                <div>
+                  <h4 class="font-mono text-xs text-text-muted uppercase tracking-widest mb-2">Certificación</h4>
+                  <h3 class="text-xl font-bold text-text-primary">CCNA v7 & IT Essentials</h3>
+                  <p class="text-text-secondary mt-1 text-sm">Cisco Networking Academy</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                  <span class="inline-block px-3 py-1 bg-corporate-dark border border-corporate-border font-mono text-xs text-text-secondary">Redes / TCP/IP</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="max-w-6xl mx-auto px-6 py-24">
+      <div class="border border-corporate-border bg-corporate-surface p-12 md:p-16 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-burgundy-primary to-transparent"></div>
+        <h3 class="font-mono text-sm text-burgundy-light uppercase tracking-widest mb-4">Iniciación de Protocolo</h3>
+        <h2 class="text-3xl md:text-5xl font-sans font-bold text-text-primary mb-8">Transmisión de<br/>Datos</h2>
+        <p class="text-text-secondary max-w-xl mx-auto mb-10">Actualmente explorando nuevas oportunidades para desplegar soluciones tecnológicas avanzadas. El canal de comunicación se encuentra abierto.</p>
+        
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 font-mono text-sm">
+          <a href="mailto:ian.castroj@alumnos.santotomas.cl" class="px-8 py-4 bg-text-primary text-corporate-dark font-bold hover:bg-gold-accent transition-colors inline-block w-full sm:w-auto">
+            ESTABLECER_CONEXIÓN
+          </a>
+          <a href="https://www.linkedin.com/in/ian-castro-540537378" target="_blank" class="px-8 py-4 border border-corporate-border bg-corporate-dark hover:bg-corporate-surface hover:border-burgundy-primary text-text-secondary hover:text-text-primary transition-all inline-block w-full sm:w-auto">
+            [ RED_LINKEDIN ]
+          </a>
+          <a href="https://github.com/AlexIbacache" target="_blank" class="px-8 py-4 border border-corporate-border bg-corporate-dark hover:bg-corporate-surface hover:border-burgundy-primary text-text-secondary hover:text-text-primary transition-all inline-block w-full sm:w-auto">
+            [ REPOSITORIOS_GIT ]
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-corporate-border py-8 text-center font-mono text-xs text-text-muted">
+    <p>SISTEMA IC.DEV // 2026 // OPERACIÓN NORMAL</p>
+  </footer>
+</Layout>
+
+<script>
+  // Mobile menu toggle logic
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIconPath = document.getElementById('menu-icon-path');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileMenu.classList.remove('hidden');
+      menuIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X icon
+    } else {
+      mobileMenu.classList.add('hidden');
+      menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger icon
+    }
+  }
+
+  mobileMenuBtn?.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+
+  // Update scroll progress bar
+  window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = scrollPercentage + '%';
+    }
+  }, { passive: true });
+</script>

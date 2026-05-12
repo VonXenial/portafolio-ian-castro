@@ -48,22 +48,17 @@ import MagneticButton from "../components/MagneticButton.tsx";
         <p
           class="text-body-lg font-serif text-cream/80 leading-relaxed mb-6 text-justify hyphens-auto first-letter:text-5xl first-letter:font-bold first-letter:text-burgundy first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8]"
         >
-          Estudiante de cuarto año de Ingeniería en Informática con sólida
-          formación en desarrollo de software, bases de datos, redes y
-          arquitectura de sistemas.
+          Ingeniero en Informática titulado con distinción máxima, con sólida formación en desarrollo de software, bases de datos, redes y arquitectura de sistemas. Poseo dominio de múltiples lenguajes de programación y herramientas tecnológicas multiplataforma (Web, Android, Escritorio).
         </p>
         <p
           class="text-body font-serif text-cream/60 leading-relaxed mb-8 text-justify hyphens-auto"
         >
-          Destaco por mi capacidad de aprendizaje continuo, trabajo en equipo y
-          responsabilidad. Poseo formación en múltiples lenguajes de
-          programación y liderazgo de proyectos académicos orientados a la
-          planificación, implementación y pruebas de soluciones informáticas.
+          Tengo experiencia en el liderazgo de proyectos orientados a la planificación, implementación y pruebas de soluciones informáticas complejas con integración de IA. Destaco por mi capacidad de aprendizaje continuo, trabajo en equipo, responsabilidad y un compromiso inquebrantable con la mejora constante.
         </p>
 
         <!-- Education badge -->
         <div
-          class="flex items-center gap-4 p-4 bg-stone-warm/50 border-l-4 border-burgundy"
+          class="flex items-center gap-4 p-4 bg-stone-warm/50 border-l-4 border-burgundy hover:bg-stone transition-colors group"
         >
           <img
             src="/images/logo-santo-tomas.webp"
@@ -76,7 +71,10 @@ import MagneticButton from "../components/MagneticButton.tsx";
               Instituto Profesional Santo Tomás
             </p>
             <p class="text-cream/60 text-sm">
-              Ingeniería en Informática · 2022 - 2025
+              Ingeniero Informático · Titulado (Mayo 2026)
+            </p>
+            <p class="text-crimson-light font-bold text-xs uppercase tracking-wider mt-1 group-hover:text-crimson transition-colors">
+              Aprobado con Distinción Máxima
             </p>
           </div>
         </div>
@@ -114,11 +112,11 @@ import MagneticButton from "../components/MagneticButton.tsx";
           <p
             class="text-body font-serif text-cream/80 leading-relaxed text-justify hyphens-auto"
           >
-            Desarrollo y apoyo en soluciones informáticas internas del hospital.
-            Participé en tareas de análisis, implementación y mantenimiento de
-            sistemas, colaborando con el equipo en entornos reales. Desarrollé
-            un módulo de receta oncológica con gestión de MLE y códigos Fonasa
-            usando React, Next.js y Prisma. (425 horas aprox).
+            Desarrollé e implementé soluciones informáticas internas optimizando
+            procesos hospitalarios en entorno de producción real. Colaboré en
+            análisis, mantenimiento y mejora continua de sistemas críticos de
+            salud. Completé más de 425 horas de práctica profesional con enfoque
+            en arquitectura de sistemas legacy.
           </p>
         </div>
 
@@ -326,12 +324,33 @@ import MagneticButton from "../components/MagneticButton.tsx";
               )
             }
           </div>
-          <span
-            class="inline-flex items-center gap-2 text-cream/50 font-sans text-sm uppercase tracking-widest"
-          >
-            <span class="w-2 h-2 bg-crimson rounded-full animate-pulse"></span>
-            En desarrollo activo
-          </span>
+          <div class="flex flex-col sm:flex-row gap-4 sm:items-center mt-4">
+            <span
+              class="inline-flex items-center gap-2 text-cream/50 font-sans text-sm uppercase tracking-widest"
+            >
+              <span class="w-2 h-2 bg-crimson rounded-full animate-pulse"></span>
+              En desarrollo activo
+            </span>
+            <a
+              href="https://hackwars.vercel.app/"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-cream hover:text-crimson font-sans uppercase tracking-widest transition-colors"
+            >
+              Sitio Web
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
         </div>
         <div
           class="relative z-10 aspect-video overflow-hidden bg-stone-dark order-1 lg:order-2"
@@ -346,6 +365,46 @@ import MagneticButton from "../components/MagneticButton.tsx";
       </article>
     </div>
   </section>
+
+  <!-- Certifications Section -->
+  <Section
+    id="certificaciones"
+    title="Certificaciones"
+    subtitle="Validación oficial y desarrollo profesional"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Certificado de Título -->
+      <div class="p-8 bg-black-soft border border-cream/5 hover:border-crimson/50 transition-colors relative overflow-hidden group shadow-lg">
+        <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 group-hover:scale-110">
+          <svg class="w-24 h-24 text-cream" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.1V17h2V7L12 2zm0 10.9l-9-4.1 9 4.1 9-4.1-9 4.1zM3 13v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6l-9 4.1L3 13z"/></svg>
+        </div>
+        <span class="text-crimson font-sans text-xs font-bold uppercase tracking-widest mb-2 block">Título Profesional</span>
+        <h3 class="text-2xl font-sans font-bold text-cream mb-2 relative z-10">Ingeniero Informático</h3>
+        <p class="text-cream/60 font-serif mb-4 relative z-10">Instituto Profesional Santo Tomás</p>
+        <div class="space-y-3 mt-6 border-t border-cream/10 pt-6 relative z-10">
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Emisión:</span> <span>07 de Mayo, 2026</span></p>
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Calificación:</span> <span class="text-crimson-light font-bold">Distinción Máxima</span></p>
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Registro:</span> <span class="font-mono">N° 148569-1</span></p>
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Verificación:</span> <span class="font-mono text-cream/60">SHJ8PA54</span></p>
+        </div>
+      </div>
+
+      <!-- Cisco -->
+      <div class="p-8 bg-black-soft border border-cream/5 hover:border-crimson/50 transition-colors relative overflow-hidden group shadow-lg">
+        <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 group-hover:scale-110">
+          <svg class="w-24 h-24 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+        </div>
+        <span class="text-crimson font-sans text-xs font-bold uppercase tracking-widest mb-2 block">Cisco Networking Academy</span>
+        <h3 class="text-2xl font-sans font-bold text-cream mb-2 relative z-10">CCNA v7 & IT Essentials</h3>
+        <p class="text-cream/60 font-serif mb-4 relative z-10">Introducción a Redes e Infraestructura</p>
+        <div class="space-y-3 mt-6 border-t border-cream/10 pt-6 relative z-10">
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Área:</span> <span>Redes TCP/IP</span></p>
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Conocimientos:</span> <span>LAN, DHCP, IPv4/IPv6</span></p>
+          <p class="text-sm font-sans text-cream/80 flex justify-between items-center"><span class="text-cream/50 uppercase tracking-wider text-xs">Simulación:</span> <span>Cisco Packet Tracer</span></p>
+        </div>
+      </div>
+    </div>
+  </Section>
 
   <!-- Skills Section -->
   <Section
