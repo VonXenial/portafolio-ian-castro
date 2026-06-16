@@ -274,9 +274,14 @@ import imgSantoTomas from '../../public/images/logo-santo-tomas.webp';
         <h2 class="text-3xl font-sans font-bold text-text-primary">Desarrollos<br/>Destacados</h2>
       </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="relative w-full overflow-hidden py-4">
+        <!-- Gradientes para difuminar los bordes -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-r from-corporate-dark to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-corporate-dark to-transparent z-10 pointer-events-none"></div>
+        
+        <div id="projects-track" class="flex gap-8 w-max carousel-track hover:[animation-play-state:paused]">
         <!-- Project 1 -->
-        <div class="group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+        <div class="w-[320px] md:w-[450px] shrink-0 group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
           <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center">
             <Image src={imgSpareParts} alt="SparePartsM" width={800} class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" />
           </div>
@@ -295,7 +300,7 @@ import imgSantoTomas from '../../public/images/logo-santo-tomas.webp';
         </div>
 
         <!-- Project 2 -->
-        <div class="group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+        <div class="w-[320px] md:w-[450px] shrink-0 group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
           <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center">
             <div class="absolute top-4 right-4 z-20 flex items-center gap-2 bg-corporate-dark/80 px-2 py-1 rounded-sm backdrop-blur-sm">
               <span class="w-2 h-2 rounded-full bg-burgundy-light animate-pulse"></span>
@@ -311,11 +316,97 @@ import imgSantoTomas from '../../public/images/logo-santo-tomas.webp';
               <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">GDScript</span>
               <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Ciberseguridad</span>
             </div>
-            <a href="https://hackwars.vercel.app/" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
-              [VER_SITIO_WEB] <span class="text-lg">→</span>
+            <div class="flex gap-4">
+              <a href="https://github.com/VonXenial/HackWars_Protocol_Cards" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+                [VER_CÓDIGO] <span class="text-lg">→</span>
+              </a>
+              <a href="https://hackwars.vercel.app/" target="_blank" class="font-mono text-sm text-burgundy-light hover:text-text-primary transition-colors flex items-center gap-2">
+                [SITIO_WEB] <span class="text-lg">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="w-[320px] md:w-[450px] shrink-0 group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+          <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center group-hover:bg-burgundy-deep/10 transition-colors">
+            <img src="https://github.com/VonXenial/neo-os-web/raw/main/assets/img/logo_main.png" alt="Neo OS Web" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold text-text-primary mb-2">Neo OS Web</h4>
+            <p class="text-text-secondary text-sm flex-grow mb-6">Interfaz web dinámica que simula un entorno de sistema operativo en el navegador. Demostración de habilidades avanzadas en Frontend y UI/UX interactiva.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">JavaScript</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Frontend</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">UI/UX</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/VonXenial/neo-os-web" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+                [VER_CÓDIGO] <span class="text-lg">→</span>
+              </a>
+              <a href="https://neo-os-web.vercel.app" target="_blank" class="font-mono text-sm text-burgundy-light hover:text-text-primary transition-colors flex items-center gap-2">
+                [DEMO] <span class="text-lg">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="w-[320px] md:w-[450px] shrink-0 group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+          <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-8 flex items-center justify-center group-hover:bg-burgundy-deep/10 transition-colors">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 drop-shadow-lg">
+                <g transform="translate(100, 100)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+                  <!-- Nodes/Endpoints -->
+                  <circle cx="-50" cy="0" r="6" class="fill-corporate-dark stroke-text-muted group-hover:stroke-gold-accent transition-colors duration-500" stroke-width="3" />
+                  <circle cx="50" cy="-40" r="6" class="fill-corporate-dark stroke-text-muted group-hover:stroke-gold-accent transition-colors duration-500" stroke-width="3" />
+                  <circle cx="50" cy="40" r="6" class="fill-corporate-dark stroke-text-muted group-hover:stroke-gold-accent transition-colors duration-500" stroke-width="3" />
+                  
+                  <!-- Connections -->
+                  <path d="M-44 0 L10 0 M10 0 L44 -40 M10 0 L44 40" class="stroke-corporate-border group-hover:stroke-burgundy-primary transition-colors duration-500" stroke-width="2" />
+                  
+                  <!-- Server / Database Core -->
+                  <rect x="-15" y="-20" width="30" height="40" rx="4" class="fill-corporate-dark stroke-text-secondary group-hover:stroke-burgundy-light transition-colors duration-500" stroke-width="3" />
+                  <line x1="-5" y1="-10" x2="5" y2="-10" class="stroke-text-muted group-hover:stroke-burgundy-light transition-colors duration-500" stroke-width="2" />
+                  <line x1="-5" y1="0" x2="5" y2="0" class="stroke-text-muted group-hover:stroke-burgundy-light transition-colors duration-500" stroke-width="2" />
+                  <line x1="-5" y1="10" x2="5" y2="10" class="stroke-text-muted group-hover:stroke-burgundy-light transition-colors duration-500" stroke-width="2" />
+
+                  <!-- Accent decorative rings -->
+                  <circle cx="0" cy="0" r="60" class="stroke-corporate-border/30 group-hover:stroke-burgundy-primary/20 transition-colors duration-700" stroke-width="1" stroke-dasharray="4 4" />
+                </g>
+             </svg>
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold text-text-primary mb-2">NestJS Prisma CRUD</h4>
+            <p class="text-text-secondary text-sm flex-grow mb-6">Arquitectura Backend escalable para una API RESTful desarrollada con NestJS y Prisma ORM. Diseño orientado a servicios con tipado fuerte.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">TypeScript</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">NestJS</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">Prisma</span>
+            </div>
+            <a href="https://github.com/VonXenial/NestJS-Prisma-CRUD-API" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+              [VER_REPOSITORIO] <span class="text-lg">→</span>
             </a>
           </div>
         </div>
+
+        <!-- Project 5 -->
+        <div class="w-[320px] md:w-[450px] shrink-0 group bg-corporate-surface border border-corporate-border hover:border-burgundy-primary/50 transition-colors flex flex-col h-full">
+          <div class="h-48 bg-corporate-dark border-b border-corporate-border overflow-hidden relative p-4 flex items-center justify-center group-hover:bg-burgundy-deep/10 transition-colors">
+             <img src="https://github.com/VonXenial/markitdown-ui/raw/main/ui/logo.png" alt="MarkitDown UI" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold text-text-primary mb-2">MarkitDown UI</h4>
+            <p class="text-text-secondary text-sm flex-grow mb-6">Interfaz de usuario interactiva y eficiente para gestionar o editar markdown, destacando habilidades en el desarrollo de herramientas Front-end orientadas al usuario.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">JavaScript</span>
+              <span class="px-2 py-1 bg-corporate-dark text-text-muted font-mono text-xs border border-corporate-border">UI/UX</span>
+            </div>
+            <a href="https://github.com/VonXenial/markitdown-ui" target="_blank" class="font-mono text-sm text-gold-accent hover:text-text-primary transition-colors flex items-center gap-2">
+              [VER_REPOSITORIO] <span class="text-lg">→</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -440,4 +531,23 @@ import imgSantoTomas from '../../public/images/logo-santo-tomas.webp';
       scrollProgress.style.width = scrollPercentage + '%';
     }
   }, { passive: true });
+  // Clone project cards for infinite marquee
+  const track = document.getElementById('projects-track');
+  if (track) {
+    const cards = Array.from(track.children);
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
 </script>
+
+<style>
+  .carousel-track {
+    animation: scroll 40s linear infinite;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); } /* -50% equals one full set. 1rem accounts for half of gap-8 */
+  }
+</style>
